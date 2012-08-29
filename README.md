@@ -1,0 +1,4 @@
+Calculator
+==========
+
+Jquery calculator widget
