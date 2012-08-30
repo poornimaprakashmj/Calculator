@@ -11,7 +11,7 @@
     	color-stop(1, #d9e4f0),
     );
     width:120px;
-    height:110px;
+    height:135px;
     border-radius:5px;
     padding:5px;
     border:3px solid #cae0f8 ;
@@ -24,6 +24,7 @@
     border-radius:3px;
     border:1px solid #a0abba;
     font-family:arial,san-serif;
+    font-size: 10px;
 }
 .jq-calculator button:hover{
     background:#FFDE85;
@@ -32,11 +33,22 @@
     margin:2px;
     border:1px solid gray;
     background: -webkit-linear-gradient(top, #f6fafe, #eaf1f8);
-    border-radius:2px;width:19px;height:15px;
+    border-radius:2px;
+    width:19px;
+    height:15px;
     font-family:arial,san-serif;
-    font-size:9px;
-    text-align:justify;
+    font-size:6px;
+    text-align:center;
     color:#4a689d
+}
+.jq-calculator .memory{
+     display: block;
+     width: 10px;
+     height: 10px;
+     position: absolute;
+     top: 16px;
+     right: 5px;
+     font-size: 8px;
 }
 .jq-calculator.operator{
     background: -webkit-linear-gradient(top, #ecf2f8, #d5e0ee)
@@ -45,16 +57,17 @@
     border:1px solid #a0abba;
     background: -webkit-linear-gradient(top, #f6fafe, #eaf1f8)
 }
-.jq-calculator button.equalTo{
+.jq-calculator button[value="="]{
     position:relative;
-    height:35px;
+    height: 15px;
+    width: 43px;
     background: -webkit-linear-gradient(top, #ecf2f8, #d5e0ee)
 }
 .jq-calculator button[value="0"]{
     width:43px;
 }
 .jq-calculator button[value="C"]{
-    height:35px;
+    height:15px;
 }
 .jq-calculator .numbers{
     width:70px;
@@ -64,10 +77,13 @@
     width:50px;
     float:left
 }
+.jq-calculator .mem-operators{
+
+}
 .jq-calculator input[type="button"]{
 width:50px;
 }
-.theme1{
+.barbie{
     background-image: linear-gradient(bottom, #F5DFE5 31%, #F095B0 66%);
     background-image: -o-linear-gradient(bottom, #F5DFE5 31%, #F095B0 66%);
     background-image: -moz-linear-gradient(bottom, #F5DFE5 31%, #F095B0 66%);
@@ -82,60 +98,66 @@ width:50px;
         color-stop(0.66, #F095B0)
     );
     width: 148px;
-    height: 126px;
-
+    height: 170px;
     border:3px solid #F76C96 ;
     box-shadow: 3px 3px 5px #888888;
 }
-.theme1 input{
+.barbie input{
      background: -webkit-linear-gradient(bottom, #FFFFFF 0%,  #FAF5F7  100%);
      border:1px solid #CC7690;
 }
-.theme1 button {
+.barbie button {
     background: -webkit-linear-gradient(top, #f6fafe, #eaf1f8);
     width: 25px;
     height: 20px;
     color:#CC7690
 
 }
-.theme1 button:hover{
+.barbie button:hover{
     background:#FFDE85;
 }
-.theme1 .number{
+.barbie .number{
         border:1px solid #CC7690;
         background: #ffffff;
 }
-.theme1 .operator{
+.barbie .operator{
         border:1px solid #CC7690;
         background: -webkit-linear-gradient(top, white, #E3D9D7 );
 }
-.theme1 .numbers{
+.barbie .numbers{
     width: 90px;
     float:left
 }
-.theme1 .operators{
+.barbie .operators{
     width:58px;
-    float:left
+    float:left;
+    margin-left:-2px
 }
-.theme1 button[value="="]{
+.barbie button[value="="]{
     position:relative;
     border:1px solid #CC7690;
-    height:43px;
+    width:54px;
+    height:20px;
     background: -webkit-linear-gradient(top, white, #E3D9D7 );
 }
-.theme1 button[value="0"]{
+.barbie button[value="0"]{
     width:54px;
 }
-.theme1 button[value="C"]{
-    height:43px;
-    border:1px solid #CC7690;
-    background: -webkit-linear-gradient(top, white, #E3D9D7 );
+.barbie button[value="C"]{
+    height: 20px;
+    border: 1px solid #CC7690;
+    background: -webkit-linear-gradient(top, white, #E3D9D7 )
+}
+.barbie button[value="CE"]{
+    height: 20px;
+    border: 1px solid #CC7690;
+    background: -webkit-linear-gradient(top, white, #E3D9D7 )
 }
 
 .theme2{
     background:#e3d9d7;
-    width: 183px;
-    height: 175px;
+    width: 177px;
+    height: 239px;
     border:3px solid #f0ae08 ;
     box-shadow: 3px 3px 5px #888888;
     border-radius:12px;
@@ -144,69 +166,66 @@ width:50px;
      background: #B9EDFA;
      border: 2px solid #F0AE08;
      border-bottom: 6px solid #F0AE08;
-     width: 191px;
+     width: 185px;
      margin-left: -6px;
      height: 33px;
      margin-top: -5px;
      border-radius: 10px 10px 0 0;
 }
+.theme2 button{
+   width:30px;
+   height:30px;
+   color: black;
+   border-radius: 15px;
+   box-shadow: 2px 2px 2px grey;
+   font-weight: bold;
+   font-size: 19px;
+   text-align: center;
+}
 
 .theme2 .numbers {
     width:104px;
 }
-.theme2 .number{
-    width: 30px;
-    height: 30px;
-    color: black;
-    border-radius: 15px;
-    box-shadow: 2px 2px 2px grey;
-    font-weight: bold;
-    font-size: 19px;
-    text-align: center;
 
+.theme2 .mem-operator{
+    font-size: 12px;
 }
 .theme2 .operators{
-   width:78px;
+   width:73px;
 }
 .theme2 .operator{
-    font-weight: bold;
-    color: black;
-    font-size: 19px;
-    text-align: center;
-    width:30px;
-    height:30px;
-    border-radius:15px;
+     background: -webkit-linear-gradient(top, white, #F0AE08 );
+     box-shadow: 3px 3px 3px grey;
+     border: 1px solid grey;
+}
+.theme2 .other-operator{
+    font-size: 12px;
     background: -webkit-linear-gradient(top, white, #F0AE08 );
     box-shadow: 3px 3px 3px grey;
-     border: 1px solid grey;
+    border: 1px solid grey;
 }
 .theme2 button[value="0"]{
     width: 64px;
     height:30px;
     border-radius:15px;
-
 }
 .theme2 button[value="C"]{
-    width:30px;
     box-shadow: 3px 3px 3px grey;
-         border: 1px solid grey;
-    height: 65px;
-    border-radius:15px;
-    font-weight: bold;
-    font-size: 19px;
-    text-align: center;
-    color: black;
+    border: 1px solid grey;
+    font-size: 12px;
+    height:30px;
+    background: -webkit-linear-gradient(top, white, #F0AE08 );
+}
+.theme2 button[value="CE"]{
+    box-shadow: 3px 3px 3px grey;
+    border: 1px solid grey;
+    font-size: 12px;
     background: -webkit-linear-gradient(top, white, #F0AE08 );
 }
 .theme2 button[value="="]{
-    width:30px;
+    width:69px;
     box-shadow: 3px 3px 3px grey;
-         border: 1px solid grey;
-    height: 65px;
-    border-radius:15px;
-    font-weight: bold;
-    font-size: 19px;
-    text-align: center;
-    color: black;
+    border: 1px solid grey;
+    height: 30px;
     background: -webkit-linear-gradient(top, white, #F0AE08);
 }
